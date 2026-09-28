@@ -10,6 +10,7 @@ jobs:
 
   "second_flow":
     runs-on: ubuntu-latest
+    needs: first_workflow
     steps:
       - name: say Tushal
         run: echo "Tushal"
