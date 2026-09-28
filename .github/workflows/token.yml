@@ -1,0 +1,9 @@
+name: token
+on: ["push"]
+jobs:
+  test:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Check GitHub Token
+          run: |
+            echo "GitHub token exists: ${{ secrets.GITHUB_TOKEN != '' }}"
