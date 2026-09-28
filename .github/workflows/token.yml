@@ -6,4 +6,4 @@ jobs:
       steps:
         - name: Check GitHub Token
           run: |
-            echo "GitHub token exists: ${{ secrets.GITHUB_TOKEN != '' }}"
+            echo "GitHub token exists: ${{ secrets.GITHUB_TOKEN}}"
