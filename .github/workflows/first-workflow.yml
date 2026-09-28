@@ -7,3 +7,11 @@ jobs:
     steps:
       - name: say hello
         run: echo "Hello"
+
+  "second_flow":
+    runs-on: ubuntu-latest
+    steps:
+      - name: say Tushal
+        run: echo "Tushal"
+      - name: say arjun
+        run: echo "arjun">arjun.txt
