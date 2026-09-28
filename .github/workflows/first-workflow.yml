@@ -15,7 +15,7 @@ jobs:
       - name: say Tushal
         run: echo "Tushal"
       - name: say arjun
-        run: echo "arjun">arjun.txt
+        run: echo "arjun"> dist/arjun.txt
       - uses: actions/upload-artifact@v7.0.1
         with:
           name: artifact_second_flow
