@@ -1,5 +1,5 @@
 name: first_workflow
-on: workflow_dispatch
+on: push
 
 jobs:
   "first_workflow":
@@ -17,7 +17,9 @@ jobs:
       - name: make folder dist
         run : mkdir -p dist
       - name: say arjun
-        run: echo "arjun"> dist/tushal.txt
+        run: | 
+          echo "arjun"> dist/tushal.txt
+          echo "::notice::Information message"
       - uses: actions/upload-artifact@v7.0.1
         with:
           name: artifact_second_flow
