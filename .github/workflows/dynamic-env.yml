@@ -12,3 +12,21 @@ jobs:
         run: |
           echo "Build date: $BUILD_DATE"
           echo "Short commit: $COMMIT_SHORT"
+  second:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set multi-line variable
+        run: |
+          {
+            echo "JSON_DATA<<EOF"
+            cat << 'INNER_EOF'
+          {
+            "name": "test",
+            "value": "data"
+          }
+          INNER_EOF
+            echo "EOF"
+          } >> $GITHUB_ENV
+      - name: Use multi-line variable
+        run: echo "$JSON_DATA"
+
